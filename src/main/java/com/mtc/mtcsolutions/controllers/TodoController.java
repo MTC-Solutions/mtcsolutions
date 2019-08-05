@@ -48,11 +48,7 @@ public class TodoController {
     @Async
     @DeleteMapping("{id}")
     public CompletableFuture<Todo> deleteTodo(@PathVariable Long id){
-        CompletableFuture<Todo> todo = _todoService.deleteTodo(id);
-        if (todo == null){
-            nnh
-        }
-
+        return _todoService.deleteTodo(id);
     }
 
 }
